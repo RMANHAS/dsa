@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>searcing in array by linear search</title>
+    <Script>
+        // let data=[12,22,33,44,32,34,45,25];
+        // itemSearch=12;
+        // let index=undefined;
+
+        // for(i=0;i<data.length-1;i++){
+        //     //console.log(data[i]);
+        //     if(data[i]===itemSearch){
+        //         //console.log(data[i])
+                
+        //          index=i;
+              
+                
+           // }
+            //console.warn(`index value :-${index} & element seached is ${itemSearch}`);
+           // console.warn(index);
+           // console.warn(data.indexOf(itemSearch)); //indexof is used for searching th element in array
+           //data.splice(2,1); //splicce is used to delete the element for array
+           //console.warn(data);
+       // }
+           function searchElement(){
+            let data=[12,22,33,44,32,34,45,25];
+        itemSearch=document.getElementById("searchEl").value;
+        let index=undefined;
+
+        for(i=0;i<data.length-1;i++){
+            //console.log(data[i]);
+            if(data[i]==itemSearch){
+                //console.log(data[i])
+                
+                 index=i;
+              
+              
+           }
+        }console.warn(index)
+    }
+    </Script>
+</head>
+<body>
+    <input type="'text" placeholder="enter the number you search" id="searchEl">
+    <button  onclick="searchElement()">search element</button>
+    
+</body>
+</html>

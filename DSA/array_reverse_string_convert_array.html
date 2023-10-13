@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>reverse string</title>
+    <script>
+      let data = [];
+      let currentsize = data.length;
+
+      function push(newval) {
+        data[currentsize] = newval;
+        currentsize += 1;
+      }
+
+      function pop() {
+        lastRemovedItem=data[currentsize-1];
+        currentsize -= 1;
+        data.length = currentsize;
+        return lastRemovedItem;
+      }
+
+      function reversestr(item){
+        for(let i=0;i<item.length;i++){
+            push(item[i]);
+        }
+        //console.warn(item);
+        for(let i=0;i<item.length;i++){
+            // console.warn(pop());
+            item[i]=pop();//here the value of pop is through into the push by using item paramter to reverse the string by using push and pop concept
+            
+        }
+      }
+
+    //   push(29);
+    //   push(23);
+    //   pop();
+    let str="rajinder";
+    str=str.split(""); //here split convert strin into array
+
+    
+    reversestr(str)
+    console.warn(str)
+    console.warn(str.join(""))//here we convert array into string by using join("")
+     //console.log("stack push", data);
+    </script>
+  </head>
+  <body>
+    <h1>reverse string convert string into array push pop</h1>
+  </body>
+</html>

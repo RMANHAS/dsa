@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        let queue=[];
+        let currentsize=queue.length;
+        let maxsize=3;
+
+        // function enqueue(newval){
+        //     if(currentsize>=maxsize){
+        //         alert("queue is alredy full")
+        //     }else{
+        //         queue[currentsize]=newval;
+        //     currentsize++;
+
+        //     }
+        //     }
+
+        function enqueuewithbtn(){
+            let newval=document.getElementById("qEl").value
+            if(currentsize>=maxsize){
+                alert("queue is alredy full")
+            }else{
+                queue[currentsize]=newval;
+            currentsize++;
+
+            }
+            }
+        function display(){
+            console.log(queue)
+        }
+        function dequeue(){
+            if(currentsize>0){
+                for(let i=0;i<=queue.lenght;i++){
+                queue[i]=queue[i+1]
+             }
+             currentsize--;
+             queue.length=currentsize;
+            }else{
+                alert("queue is already empty")
+            }
+             
+        }
+
+        enqueue(10);  //queue means enter the value;
+        // enqueue(20);
+        // enqueue(30);
+        display();
+        dequeue(); //dequeue means delete the value;bcz it follow fifo;
+        display();
+        dequeue();
+        display();
+    </script>
+</head>
+<body>
+    <h1>this is queue.it is a linear dsa(means element in sequence like array,queue,stack)</h1>
+    <input placeholder="enter element" id="qEl"/>
+    <button onclick="enqueuewithbtn()">add element</button>
+    <button onclick="dequeue()">delete element</button>
+    <button onclick="display()">get front element</button>
+    <button onclick="display()">display </button>
+    <button onclick="rear()">rear element</button>
+
+</body>
+</html>

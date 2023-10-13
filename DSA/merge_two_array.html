@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>merge two arrays</title>
+    <script>
+        let data=[12,22,33,22,13,45];
+        let data2=[9,8,7,6,5,66,77,88];
+        let data3=[];
+        for(i=0;i<data.length;i++){
+            data3[i]=data[i]
+        }
+        for(i=0;i<data2.length;i++){
+            data3[data.length+i]=data2[i]//merge two arrays data3=[...data,...data2].this is the shortest way to merge the two array
+        }
+        console.log(data3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

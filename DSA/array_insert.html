@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>arry insertion</title>
+    <script>
+        // let data=[20,30,10,23,43]
+        // let newle=22;
+        // let position=2;
+        // console.warn(data)
+        // for(let i=data.length-1;i>=0;i--){
+        //     // console.log(i)
+        //     //console.log(data[i])
+        //     if(i>=position){
+        //         data[i+1]=data[i]; //if we end here we get the duplicate value and here the value is not inserted(position) .here we just find the position the position where we inserted the value
+        //         if(i==position){
+        //             data[i]=newle;//here we inserted(add) the value(position).
+        //         }
+        //     }
+            
+        // }console.warn(data) //this is simply show on console.
+
+
+        // here we use the buttons for show the output
+        function insertel(){
+            let data=[20,10,30,11,22];
+            let newEl=document.getElementById("newEl").value;
+            newEl=parseInt(newEl); 
+            let position=document.getElementById("position").value;
+            console.warn(data)
+
+            for(let i=data.length-1;i>=0;i--){
+                if(i>=position){
+                    data[i+1]=data[i];
+                    if(i==position){
+                        data[i]=newEl
+                    }
+                    
+                }
+            }
+            console.log(data)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="position" placeholder="enter position"/>
+    <input type="text" id="newEl" placeholder="enter new element"/>
+    <button onclick="insertel()">insert</button>
+</body>
+</html>

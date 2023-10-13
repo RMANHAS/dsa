@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>reverse an array</title>
+    <script>
+        let data=[5,12,65,44,0];
+        let temp;
+        function customReverse(data,start,end){
+           console.log(data);
+            if(start<=end){
+                temp=data[start]
+                data[start]=data[end];
+                data[end]=temp;
+                customReverse(data,start+1,end-1)
+            }
+        }
+        customReverse(data,0,data.length-1)
+    </script>
+</head>
+<body>
+    <h1>
+        reverse an array 
+    </h1>
+    
+</body>
+</html>

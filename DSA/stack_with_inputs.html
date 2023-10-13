@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>push pop buttons</title>
+    <script>
+      let data = [];
+      let currentsize = data.length;
+      let max = 5;
+
+      function push() {
+        let newval = document.getElementById("newEl").value;
+        if (currentsize >= max) {
+          alert("stack is full you cannot add",newval);
+          console.warn(currentsize)
+        }else{
+            data[currentsize] = newval;
+          currentsize += 1;
+          console.log("element added",data)
+          document.getElementById("newEl").value="";
+          
+        }
+        
+      }
+      function pop() {
+        if (currentsize > 0) {
+          currentsize -= 1;
+          data.length = currentsize;
+        } else {
+          alert("stack is already full");
+        }
+      }
+      function display() {
+        for (let i = 0; i <= currentsize - 1; i++) {
+          //console.warn(data[i]);
+          console.warn('stack element no.',i,'and value is',data[i])
+        }
+      }
+      // push(6);
+      // push(64);
+      // push(2);
+      // push(7);
+      // push(22);
+      // pop();
+
+      //console.log(data)
+    </script>
+  </head>
+  <body>
+    <h1>Stack in javascript</h1>
+    <input type="text" placeholder="add Element to stack" id="newEl" />
+    <button onclick="push()">Add Element to Stack</button>
+    <button onclick="pop()">delete Element to Stack</button>
+    
+   
+    <button onclick="display()">display all Element to Stack</button>
+  </body>
+</html>

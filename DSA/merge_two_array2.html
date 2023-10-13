@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>merge two array  by while loop</title>
+    <script>
+        let data=[2,3,22,33,66,85,88];
+        let data2=[11,44,56,65,87];
+        let data3=[];
+        let d1=0;
+        let d2=0;
+        let d3=0;
+        while(d1<data.length-1 && d2<data.length-1){
+            if(data[d1]<data2[d2]){
+                data3[d3]=data[d1];
+                
+                d1++;
+            }else{
+                data3[d3]=data2[d2];
+               
+                d2++;
+            }d3++;
+        }
+        console.log(d1)
+        while(d1<data.length){//here we use while loop to add the value that r left.
+            data3[d3]=data[d1]
+            d1++;
+            d3++;
+        }
+
+        console.warn(data3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

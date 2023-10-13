@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>sort element in array</title>
+    <script>
+        let data=[40,20,14,25];
+
+        for(i=0;i<data.length;i++){
+            //console.warn(data);
+            for(j=0;j<data.length;j++){ //here we use the concept of swapping
+                if(data[j]>data[j+1]){
+                   let temp=data[j];
+                   data[j]=data[j+1];
+                   data[j+1]=temp;
+                }
+                
+            }
+        }console.warn(data)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

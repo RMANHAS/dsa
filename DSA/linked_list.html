@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class List{
+            constructor(data){
+                this.head={
+                    value:data,
+                    next:null,
+                    
+                }
+                this.tail=this.head;
+                this.size=1;
+            }
+            appendNode(nodedata){
+                let newNode={
+                    value:nodedata,
+                    next:null
+                }
+                this.tail.next=newNode;
+                this.tail=newNode;
+                this.size+=1;
+
+            }
+
+        }
+        let list =new List(200);
+        list.appendNode(300);
+        list.appendNode(400);
+        console.log(list);
+    </script>
+</head>
+<body>
+    linked list (node)
+</body>
+</html>

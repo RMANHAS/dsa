@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <!-- <title>Document</title>
+   
+    <script>
+        class Node{
+            constructor(val){
+                this.value=val;
+                this.left=null;
+                this.right=null;
+            }
+        }
+         class bstree{
+        constructor(){
+            this.root=null;
+        }
+        isEmpty(){
+            return this.root===null;
+        }
+       
+        }
+        let bst=new bstree();
+
+        console.log(bst.isEmpty())
+    </script>
+</head>
+<body>
+    binary serch tree
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <script>
+            class Node {
+              constructor(val) {
+                this.value = val;
+                this.left = null;
+                this.right = null;
+              }
+            }
+            class bstree {
+              constructor() {
+                this.root = null;
+              }
+              isEmpty() {
+                return this.root === null;
+              }
+              makeTree(val) {
+                let newNode = new Node(val);
+                if (this.root === null) {
+                  this.root == newNode;
+                } else {
+                  this.innsertNode(this.root, newNode);
+                }
+              }
+              innsertNode(root, newNode) {
+                if (root.value > newNode.value) {
+                  if (root.left === null) {
+                    root.left = newNode;
+                  } else {
+                    this.innsertNode(root.left, newNode);
+                  }
+                }else{
+                  if(root.value>newNode.value){
+                      if(root.right===null){
+                          root.right=newNode;
+                      }else{
+                     this.innsertNode(root.right,newNode)
+                  }
+                }
+              }
+            }
+        }
+      let bst = new bstree();
+      console.log(bst.isEmpty());
+       bst.makeTree(20);
+       bst.makeTree(6);
+       bst.makeTree(23);
+       console.log(bst.isEmpty());
+    </script>
+  </head>
+  <body>
+    insert node in binary serch tree
+  </body>
+</html>

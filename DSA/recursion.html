@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recursion</title>
+    <script>
+      // function apple(x){
+      //     console.warn(x);
+      //    if(x<10){
+      //     apple(x+1 )
+      //    }
+
+      // }
+      // let data=5;
+      // apple(data);
+
+      function factorial(item) {
+        if (item == 0) {
+          return 1;
+        } else {
+          return item*factorial(item - 1);
+        }
+       
+      } 
+      
+      let data = 5;
+      console.warn(factorial(data));
+      factorial(data);
+    </script>
+  </head>
+  <body></body>
+</html>

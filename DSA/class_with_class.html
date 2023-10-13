@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        class Stack{
+            item=[];
+            currentsize;
+            maxsize;
+            constructor(size){   //here the size is 5
+                //console.log("this is const")
+                this.maxsize=size;
+                this .currentsize=this.item.length;
+
+            }
+            push(newval){
+                if(this.currentsize>=this.maxsize){
+                    alert("stack is full")
+                }else{
+                    this.item[this.currentsize]=newval;
+                    this.currentsize++;
+                }
+            }
+            pop(){
+                if(this.currentsize>0){
+                    this.currentsize--;
+                    this.item.length=this.currentsize;
+                }else{
+                    alert("stack is already full")
+                }
+            }
+            display(){
+                console.log(this.item)
+            }
+        }
+        st1=new Stack(5);
+        st1.push(22);
+        st1.push(23);
+        st1.push(21);
+        st1.pop(21);
+        st1.display();
+    </script>
+</head>
+<body>
+    <h1>stack with class</h1>
+</body>
+</html>

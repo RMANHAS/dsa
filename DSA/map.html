@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let data =new Map([ //define map
+            ['name','rajinder'],
+            [true,'bool key'],
+            [100,'hundred']
+        ]);
+        data.set('color','green');
+       // console.log(data.size)//check the size of data
+        //console.log(data.has(100))//search the key
+        //console.log(data.get(100))
+        //data.clear();//used to clear all the data
+        //console.log(data);
+
+        // for(x of data){
+        //     console.log(x)
+        // }
+
+        data.forEach((val,key)=>{
+            console.log(val);//first is value printed
+            console.log(key);//second is key printed
+        })
+    </script>
+</head>
+<body>
+    <h1>
+        define a map and apply crued operatiom
+    </h1>
+</body>
+</html>

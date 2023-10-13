@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>indirect Recursion</title>
+    <script>
+        let money = 100;
+        let total_apple=0;
+        
+        function buyapple(x){
+            //console.log(x)
+            if(x>0){
+                console.log("I have",x,"Rs",total_apple)
+                buymore(x)
+            }else{
+                console.log("I dont have more money",total_apple)
+            }
+        }
+
+
+         function buymore(x){
+            total_apple++;
+            buyapple(x-10);
+            //console.log("buy more")
+         }
+         
+
+        buyapple(money);
+    </script>
+</head>
+<body>
+    <h1>Indirect Recursion</h1>
+</body>
+</html>

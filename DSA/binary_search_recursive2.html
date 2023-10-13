@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      let data = [10, 20, 30, 70, 80, 90];
+      let start = 0;
+      let end = data.lenght - 1;
+      let find = 20;
+      let position = undefined;
+      function recursiveBinary(data, start, end) {
+        let mid=Math.floor((start+end)/2);
+        //console.warn(data[mid]);//here we get the error
+        if(data[mid]===find){
+            position=mid;
+            return true;
+        }else if(data[mid]<find){
+            recursiveBinary(data,mid+1,end)
+        }else{
+            recursiveBinary(data,start,mid-1)
+        }
+      }
+      recursiveBinary(data, start, end);
+      console.log(position);
+    </script>
+  </head>
+  <body>
+    <h1>binary search with recursive approach</h1>
+  </body>
+</html>
